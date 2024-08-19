@@ -1,8 +1,8 @@
 import copy
 import os
-from models.task import *
-from models.theme import *
-from models.worker import *
+from src.greedy_algo.task import *
+from src.greedy_algo.theme import *
+from src.greedy_algo.worker import *
 from tkinter import *
 from tkinter import ttk
 from tkinter import filedialog
@@ -14,6 +14,7 @@ from params_calc import calculate_params
 from gant_diag import build_gant
 import pandas as pd
 from src.visualization_graph import generate_svg_graph
+import matplotlib
 
 
 class ObjectWrapper:
@@ -413,6 +414,7 @@ def optimize_df(workers: ObjectWrapper, themes: ObjectWrapper, write_output_file
 
 
 if __name__ == "__main__":
+    matplotlib.use('svg')
     interface = Tk()
     interface.geometry('300x70')
     interface.title('Compliance Audit v1')
