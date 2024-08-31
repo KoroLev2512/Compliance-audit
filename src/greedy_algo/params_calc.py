@@ -2,7 +2,6 @@ import pandas as pd
 import networkx as nx
 from pyvis.network import Network
 
-
 # def visualize_graph(workers, themes_len):
 #     # Создание графа
 #     G = nx.DiGraph()
